@@ -11,19 +11,16 @@ import java.util.regex.Pattern;
 public class VincentView {
 
     private File viewFile;
-
     public VincentView(File templateFile) {
         this.viewFile = templateFile;
     }
 
-    public void render(Map<String,?> model, HttpServletRequest req, HttpServletResponse resp) throws Exception {
+    public void render(Map<String, ?> model, HttpServletRequest req, HttpServletResponse resp) throws Exception {
         StringBuffer sb = new StringBuffer();
-
         RandomAccessFile ra = new RandomAccessFile(this.viewFile,"r");
 
         String line = null;
         while (null != (line = ra.readLine())){
-            //转码
             line = new String(line.getBytes("ISO-8859-1"),"utf-8");
             Pattern pattern = Pattern.compile("￥\\{[^\\}]+\\}",Pattern.CASE_INSENSITIVE);
             Matcher matcher = pattern.matcher(line);

@@ -5,19 +5,14 @@ import java.util.regex.Pattern;
 
 public class VincentHandlerMapping {
 
-    //url 的正则
-    private Pattern pattern;
-
-    //对应的Method
-    private Method method;
-
-    //Method 对应的实例对象
-    private Object controller;
+    private Pattern pattern;     //URL
+    private Method method;  //对应的Method
+    private Object controller;//Method对应的实例对象
 
     public VincentHandlerMapping(Pattern pattern, Object controller, Method method) {
         this.pattern = pattern;
-        this.controller = controller;
         this.method = method;
+        this.controller = controller;
     }
 
     public Pattern getPattern() {

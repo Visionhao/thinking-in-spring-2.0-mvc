@@ -19,7 +19,7 @@ public class VincentBeanWrapper {
         return wrapperInstance;
     }
 
-    public Class<?> getWrapperClass() {
+    public Class<?> getWrappedClass() {
         return wrapperClass;
     }
 }

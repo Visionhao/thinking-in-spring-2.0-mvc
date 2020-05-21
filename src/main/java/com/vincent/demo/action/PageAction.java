@@ -1,7 +1,7 @@
 package com.vincent.demo.action;
 
 import com.vincent.demo.service.IQueryService;
-import com.vincent.spring.framework.annotation.VincentAutowried;
+import com.vincent.spring.framework.annotation.VincentAutowired;
 import com.vincent.spring.framework.annotation.VincentController;
 import com.vincent.spring.framework.annotation.VincentRequestMapping;
 import com.vincent.spring.framework.annotation.VincentRequestParam;
@@ -14,7 +14,8 @@ import java.util.Map;
 @VincentRequestMapping("/")
 public class PageAction {
 
-    @VincentAutowried IQueryService queryService;
+    @VincentAutowired
+    IQueryService queryService;
 
     @VincentRequestMapping("/first.html")
     public VincentModelAndView query(@VincentRequestParam("name") String name){

@@ -7,7 +7,6 @@ package com.vincent.spring.framework.beans.config;
 public class VincentBeanDefinition {
 
     private String factoryBeanName;
-
     private String beanClassName;
 
     public String getFactoryBeanName() {

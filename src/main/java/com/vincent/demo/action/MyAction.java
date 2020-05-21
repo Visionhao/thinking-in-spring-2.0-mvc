@@ -2,7 +2,7 @@ package com.vincent.demo.action;
 
 import com.vincent.demo.service.IModifyService;
 import com.vincent.demo.service.IQueryService;
-import com.vincent.spring.framework.annotation.VincentAutowried;
+import com.vincent.spring.framework.annotation.VincentAutowired;
 import com.vincent.spring.framework.annotation.VincentController;
 import com.vincent.spring.framework.annotation.VincentRequestMapping;
 import com.vincent.spring.framework.annotation.VincentRequestParam;
@@ -18,9 +18,9 @@ import java.io.IOException;
 @VincentRequestMapping("/web")
 public class MyAction {
 
-    @VincentAutowried IQueryService queryService;
+    @VincentAutowired IQueryService queryService;
 
-    @VincentAutowried IModifyService modifyService;
+    @VincentAutowired IModifyService modifyService;
 
     @VincentRequestMapping("/query.json")
     public void query(HttpServletRequest request, HttpServletResponse response,
